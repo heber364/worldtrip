@@ -1,0 +1,24 @@
+.carousel{
+   .swiper-button-prev{
+        left: 42px;
+        color: #FFBA08;
+    }
+
+    .swiper-button-next{
+        right: 42px;
+        color: #FFBA08;
+    }
+
+    .swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal{
+        .swiper-pagination-bullet{
+            width: 16px;
+            height: 16px;
+            background: #999999;
+        }
+        .swiper-pagination-bullet-active{
+            background: #FFBA08;
+        }
+
+        
+    }
+}
