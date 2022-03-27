@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import  { Gradient }  from "./gradient"
+import  { Gradient }  from "./Gradient"
 
 import "swiper/css";
 import "swiper/css/navigation";

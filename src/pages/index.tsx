@@ -1,4 +1,4 @@
-import { Header } from "../components/Header";
+
 import { Carousel } from "../components/Carousel";
 import {
   Box,
@@ -14,7 +14,7 @@ import {
 export default function Home() {
   return (
     <>
-      <Header />
+      
       <Box
         bgImage="url('/images/Background.png')"
         bgRepeat="no-repeat"
