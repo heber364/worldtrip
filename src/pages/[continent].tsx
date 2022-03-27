@@ -1,4 +1,13 @@
-import { Box, Heading, SimpleGrid, Text, Flex, Stack, HStack } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  Flex,
+  Stack,
+  HStack,
+  Wrap,
+} from "@chakra-ui/react";
+import { CardCity } from "../components/CardCity";
 
 export default function Continent() {
   return (
@@ -11,11 +20,10 @@ export default function Continent() {
         w="100%"
       >
         <Flex
-          maxW="1200px"
+          maxW="1240px"
           h="100%"
           m="0 auto"
-          pl="40px"
-          pb="40px"
+          p="0 0 40px 40px"
           alignItems="end"
         >
           <Heading as="h1" color="white" fontSize="48px">
@@ -23,28 +31,83 @@ export default function Continent() {
           </Heading>
         </Flex>
       </Box>
-      <SimpleGrid columns={2} spacing={10} >
-        <Text>
+      <Flex
+        justifyContent="space-between"
+        maxW="1240px"
+        alignItems="center"
+        m="0 auto"
+        p=" 80px 40px"
+      >
+        <Text maxW="600px" fontSize="24px" display="block" textAlign="justify">
           A Europa é, por convenção, um dos seis continentes do mundo.
           Compreendendo a península ocidental da Eurásia, a Europa geralmente
           divide-se da Ásia a leste pela divisória de águas dos montes Urais, o
           rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
         </Text>
-        <HStack>
-          <Stack>
-            <Text as="b">50</Text>
-            <Text as="span">países</Text>
+        <HStack spacing="60px">
+          <Stack align="center">
+            <Text as="b" fontSize="48px" color="yellow">
+              50
+            </Text>
+            <Text as="span" fontSize="24px" fontWeight="600" color="gray.700">
+              países
+            </Text>
           </Stack>
-          <Stack>
-            <Text as="b">50</Text>
-            <Text as="span">países</Text>
+          <Stack align="center">
+            <Text as="b" fontSize="48px" color="yellow">
+              50
+            </Text>
+            <Text as="span" fontSize="24px" fontWeight="600" color="gray.700">
+              países
+            </Text>
           </Stack>
-          <Stack>
-            <Text as="b">50</Text>
-            <Text as="span">países</Text>
+          <Stack align="center">
+            <Text as="b" fontSize="48px" color="yellow">
+              50
+            </Text>
+            <Text as="span" fontSize="24px" fontWeight="600" color="gray.700">
+              países
+            </Text>
           </Stack>
         </HStack>
-      </SimpleGrid>
+      </Flex>
+      <Box maxW="1240px" m="0 auto" p="0 40px 40px 40px">
+        <Heading as="h2" fontSize="36px" color="gray.700" mb="40px">
+          Cidades +100
+        </Heading>
+        <Wrap spacing="45px">
+          <CardCity
+            img="londres.png"
+            city="Londres"
+            country="Reino Unido"
+            countryIcon="londresIcon.png"
+          />
+          <CardCity
+            img="paris.png"
+            city="Paris"
+            country="França"
+            countryIcon="parisIcon.png"
+          />
+          <CardCity
+            img="roma.png"
+            city="Roma"
+            country="Itália"
+            countryIcon="romaIcon.png"
+          />
+          <CardCity
+            img="praga.png"
+            city="Praga"
+            country="República Tcheca"
+            countryIcon="pragaIcon.png"
+          />
+          <CardCity
+            img="amsterda.png"
+            city="Amsterdã"
+            country="Holanda"
+            countryIcon="amsterdaIcon.png"
+          />
+        </Wrap>
+      </Box>
     </>
   );
 }
