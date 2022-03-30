@@ -55,18 +55,18 @@ export default function Continent() {
           </Stack>
           <Stack align="center">
             <Text as="b" fontSize="48px" color="yellow">
-              50
+              60
             </Text>
             <Text as="span" fontSize="24px" fontWeight="600" color="gray.700">
-              países
+              línguas
             </Text>
           </Stack>
           <Stack align="center">
             <Text as="b" fontSize="48px" color="yellow">
-              50
+              27
             </Text>
             <Text as="span" fontSize="24px" fontWeight="600" color="gray.700">
-              países
+              cidades +100
             </Text>
           </Stack>
         </HStack>
