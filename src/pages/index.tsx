@@ -95,7 +95,7 @@ export default function Home() {
 					</Stack>	
 				</Center>	
 			</Box>
-			<Carousel />
+	   <Carousel />
     </>
 
   );

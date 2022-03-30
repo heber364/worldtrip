@@ -1,4 +1,92 @@
 {
+  "continents": [
+    {
+      "id": "northamerica",
+      "title": "América do Norte",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
+      "countries": 3,
+      "languages": 5,
+      "citiesGlobalTop": 11,
+      "image": "northamerica.jpg"
+    },
+    {
+      "id": "southamerica",
+      "title": "América do Sul",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
+      "countries": 12,
+      "languages": 8,
+      "citiesGlobalTop": 4,
+      "image": "southamerica.jpg"
+    },
+    {
+      "id": "asia",
+      "title": "Ásia",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
+      "countries": 49,
+      "languages": 5,
+      "citiesGlobalTop": 47,
+      "image": "asia.jpg"
+    },
+    {
+      "id": "africa",
+      "title": "África",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
+      "countries": 2000,
+      "languages": 1,
+      "citiesGlobalTop": 2,
+      "image": "africa.jpg"
+    },
+    {
+      "id": "europe",
+      "title": "Europa",
+      "content": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente  divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste",
+      "image": "europa2.png",
+      "countries": 50,
+      "languages": 60,
+      "citiesGlobalTop": 34,
+      "cities": [
+        {
+          "name": "Londres",
+          "country": "Reino Unido",
+          "image": "london.png",
+          "icon": "england.png"
+        },
+        {
+          "name": "Paris",
+          "country": "França",
+          "image": "paris.png",
+          "icon": "france.png"
+        },
+        {
+          "name": "Roma",
+          "country": "Itália",
+          "image": "rome.png",
+          "icon": "italy.png"
+        },
+        {
+          "name": "Praga",
+          "country": "República Tcheca",
+          "image": "praga.png",
+          "icon": "czechRepublic.png"
+        },
+        {
+          "name": "Amsterdã",
+          "country": "Holanda",
+          "image": "amsterdam.png",
+          "icon": "netherlands.png"
+        }
+      ]
+    },
+    {
+      "id": "oceania",
+      "title": "Oceania",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
+      "countries": 14,
+      "languages": 1,
+      "citiesGlobalTop": 2,
+      "image": "oceania.jpg"
+    }
+  ],
   "slides": [
     {
       "title": "América do Norte",
@@ -36,87 +124,5 @@
       "description": "O continente dos cangurus.",
       "image": "oceania.jpg"
     }
-  ],
-  "continents": {
-    "northamerica": {
-      "title": "América do Norte",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
-      "countries": 3,
-      "languages": 5,
-      "cities-global-top": 11,
-      "image": "northamerica.jpg"
-    },
-    "southamerica": {
-      "title": "América do Sul",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
-      "countries": 12,
-      "languages": 8,
-      "cities-global-top": 4,
-      "image": "southamerica.jpg"
-    },
-    "asia": {
-      "title": "Ásia",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
-      "countries": 49,
-      "languages": 5,
-      "cities-global-top": 47,
-      "image": "asia.jpg"
-    },
-    "africa": {
-      "title": "África",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
-      "countries": 2000,
-      "languages": 1,
-      "cities-global-top": 2,
-      "image": "africa.jpg"
-    },
-    "europa": {
-      "title": "Europa",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
-      "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-      "countries": 50,
-      "languages": 1,
-      "cities-global-top": 34,
-      "cities": [
-        {
-          "name": "Londres",
-          "country": "Reino Unido",
-          "image": "london.png",
-          "icon": "england.png"
-        },
-        {
-          "name": "Paris",
-          "country": "França",
-          "image": "paris.png",
-          "icon": "france.png"
-        },
-        {
-          "name": "Roma",
-          "country": "Itália",
-          "image": "roma.png",
-          "icon": "italy.png"
-        },
-        {
-          "name": "Praga",
-          "country": "República Tcheca",
-          "image": "praga.png",
-          "icon": "czechRepublic.png"
-        },
-        {
-          "name": "Amsterdã",
-          "country": "Holanda",
-          "image": "amsterdam.png",
-          "icon": "netherlands.png"
-        }
-      ]
-    },
-    "oceania": {
-      "title": "Oceania",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
-      "countries": 14,
-      "languages": 1,
-      "cities-global-top": 2,
-      "image": "oceania.jpg"
-    }
-  }
+  ]
 }

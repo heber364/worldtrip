@@ -11,7 +11,7 @@ export function CardCity({img, city, country, countryIcon }: CardCityProps) {
   return (
     <Box
       w="256px"
-      bgImg={`./images/${img}`}
+      bgImg={`url(/images/${img})`}
       bgRepeat="no-repeat"
       borderRadius="4px"
     >
@@ -30,7 +30,7 @@ export function CardCity({img, city, country, countryIcon }: CardCityProps) {
           <Text as="b"fontSize="20px" fontWeight="600" color="gray.700">{city}</Text>
           <Text as="span" fontSize="16px" fontWeight="500" color="gray.400">{country}</Text>
         </Stack>
-        <Image src={`./images/${countryIcon}`}></Image>
+        <Image src={`/images/${countryIcon}`}></Image>
       </Flex>
     </Box>
   );

@@ -1,76 +1,68 @@
 {
-  "slides": [
-    {
+  "northamerica": {
+    "slide": {
       "title": "América do Norte",
-      "slug": "northamerica",
       "description": "O continente dos 'únicos americanos'",
       "image": "northamerica.jpg"
     },
-    {
-      "title": "América do Sul",
-      "slug": "southamerica",
-      "description": "O continente cheio de riquezas naturais.",
-      "image": "southamerica.jpg"
-    },
-    {
-      "title": "Ásia",
-      "slug": "asia",
-      "description": "O continente mais populoso.",
-      "image": "asia.jpg"
-    },
-    {
-      "title": "África",
-      "slug": "africa",
-      "description": "O continente geralmente confundido com um país.",
-      "image": "africa.jpg"
-    },
-    {
-      "title": "Europa",
-      "slug": "europe",
-      "description": "O continente mais antigo.",
-      "image": "europa.png"
-    },
-    {
-      "title": "Oceania",
-      "slug": "oceania",
-      "description": "O continente dos cangurus.",
-      "image": "oceania.jpg"
-    }
-  ],
-  "continents": {
-    "northamerica": {
-      "title": "América do Norte",
+    "page": {
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
       "countries": 3,
       "languages": 5,
       "cities-global-top": 11,
       "image": "northamerica.jpg"
-    },
-    "southamerica": {
+    }
+  },
+  "southamerica": {
+    "slide": {
       "title": "América do Sul",
+      "description": "O continente cheio de riquezas naturais.",
+      "image": "southamerica.jpg"
+    },
+
+    "page": {
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
       "countries": 12,
       "languages": 8,
       "cities-global-top": 4,
       "image": "southamerica.jpg"
-    },
-    "asia": {
+    }
+  },
+  "asia": {
+    "slide": {
       "title": "Ásia",
+      "description": "O continente mais populoso.",
+      "image": "asia.jpg"
+    },
+    "page": {
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
       "countries": 49,
       "languages": 5,
       "cities-global-top": 47,
       "image": "asia.jpg"
-    },
-    "africa": {
+    }
+  },
+  "africa": {
+    "slide": {
       "title": "África",
+      "description": "O continente geralmente confundido com um país.",
+      "image": "africa.jpg"
+    },
+    "page": {
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
       "countries": 2000,
       "languages": 1,
       "cities-global-top": 2,
       "image": "africa.jpg"
+    }
+  },
+  "europa": {
+    "slide": {
+      "title": "Europa",
+      "description": "O continente mais antigo.",
+      "image": "europa.png"
     },
-    "europa": {
+    "page": {
       "title": "Europa",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
       "image": "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
@@ -109,9 +101,15 @@
           "icon": "netherlands.png"
         }
       ]
-    },
-    "oceania": {
+    }
+  },
+  "oceania": {
+    "slide": {
       "title": "Oceania",
+      "description": "O continente dos cangurus.",
+      "image": "oceania.jpg"
+    },
+    "page": {
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
       "countries": 14,
       "languages": 1,

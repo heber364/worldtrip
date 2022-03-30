@@ -11,25 +11,25 @@ import "swiper/css/pagination";
 
 import { Gradient } from "./Gradient";
 
-type Slide = {
-  title: string;
-  description: string;
-  image: string;
-};
+import Link from "next/link";
 
 interface DataProps {
-  slide: Slide;
+  title: string;
+  slug: string;
+  description: string;
+  image: string;
 }
 
 export function Carousel() {
   const [data, setData] = useState<DataProps[]>([]);
 
   useEffect(() => {
-    api.get("/continents").then((response) => {
+    api.get("/slides").then((response) => {
       setData(response.data);
     });
   }, []);
 
+  console.log(data)
   return (
     <Box maxW="1240px" m="0 auto 40px auto">
       <Swiper
@@ -40,42 +40,46 @@ export function Carousel() {
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="carousel"
       >
-        {data.map((item) => (
-          <SwiperSlide>
-            <Box
-              bgImage={`url(/images/${item.slide.image})`}
-              bgRepeat="no-repeat"
-              bgSize="cover"
-              bgPosition="center top -100px"
-              h="450px"
-            >
-              <Center h="100%">
-                <Stack alignItems="center">
-                  <Text
-                    as="b"
-                    fontSize="48px"
-                    fontWeight="700"
-                    color="white"
-                    zIndex="1"
-                  >
-                    {item.slide.title}
-                  </Text>
-                  <Text
-                    as="p"
-                    fontSize="24px"
-                    fontWeight="700"
-                    color="white"
-                    zIndex="1"
-                  >
-                    {item.slide.description}
-                  </Text>
-                </Stack>
-              </Center>
-              <Gradient />
-            </Box>
+        {data.map((slide) => (
+          <SwiperSlide key={slide.slug}>
+            <Link href={`/continents/${slide.slug}`}>
+              <Box
+                bgImage={`url(/images/${slide.image})`}
+                bgRepeat="no-repeat"
+                bgSize="cover"
+                bgPosition="center top -100px"
+                h="450px"
+              >
+                <Center h="100%">
+                  <Stack alignItems="center">
+                    <Text
+                      as="b"
+                      fontSize="48px"
+                      fontWeight="700"
+                      color="white"
+                      zIndex="1"
+                    >
+                      {slide.title}
+                    </Text>
+                    <Text
+                      as="p"
+                      fontSize="24px"
+                      fontWeight="700"
+                      color="white"
+                      zIndex="1"
+                    >
+                      {slide.description}
+                    </Text>
+                  </Stack>
+                </Center>
+                <Gradient />
+              </Box>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
     </Box>
   );
 }
+
+

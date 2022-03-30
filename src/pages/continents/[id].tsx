@@ -7,13 +7,38 @@ import {
   HStack,
   Wrap,
 } from "@chakra-ui/react";
-import { CardCity } from "../components/CardCity";
 
-export default function Continent() {
+import { CardCity } from "../../components/CardCity";
+
+import { GetStaticPaths, GetStaticProps } from "next";
+import { ParsedUrlQuery } from 'querystring'
+
+type City = {
+  name: string,
+  country: string,
+  image: string,
+  icon: string,
+}
+
+interface ContinentProps {
+  continent: {
+    title: string;
+    image: string;
+    content: string;
+    countries: number;
+    languages: number;
+    citiesGlobalTop: number;
+    cities: City[];
+  }
+}
+
+export default function Continent({ continent }: ContinentProps) {
+  console.log(continent)
+  
   return (
     <>
       <Box
-        bgImage="url('/images/europa2.png')"
+        bgImage={`url(/images/${continent.image})`}
         bgRepeat="no-repeat"
         bgSize="cover"
         h="500px"
@@ -27,7 +52,7 @@ export default function Continent() {
           alignItems="end"
         >
           <Heading as="h1" color="white" fontSize="48px">
-            Europa
+            {continent.title}
           </Heading>
         </Flex>
       </Box>
@@ -39,15 +64,12 @@ export default function Continent() {
         p=" 80px 40px"
       >
         <Text maxW="600px" fontSize="24px" display="block" textAlign="justify">
-          A Europa é, por convenção, um dos seis continentes do mundo.
-          Compreendendo a península ocidental da Eurásia, a Europa geralmente
-          divide-se da Ásia a leste pela divisória de águas dos montes Urais, o
-          rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+          {continent.content}
         </Text>
         <HStack spacing="60px">
           <Stack align="center">
             <Text as="b" fontSize="48px" color="yellow">
-              50
+              {continent.countries}
             </Text>
             <Text as="span" fontSize="24px" fontWeight="600" color="gray.700">
               países
@@ -55,7 +77,7 @@ export default function Continent() {
           </Stack>
           <Stack align="center">
             <Text as="b" fontSize="48px" color="yellow">
-              60
+              {continent.languages}
             </Text>
             <Text as="span" fontSize="24px" fontWeight="600" color="gray.700">
               línguas
@@ -75,39 +97,49 @@ export default function Continent() {
         <Heading as="h2" fontSize="36px" color="gray.700" mb="40px">
           Cidades +100
         </Heading>
+
         <Wrap spacing="45px">
-          <CardCity
-            img="londres.png"
-            city="Londres"
-            country="Reino Unido"
-            countryIcon="londresIcon.png"
-          />
-          <CardCity
-            img="paris.png"
-            city="Paris"
-            country="França"
-            countryIcon="parisIcon.png"
-          />
-          <CardCity
-            img="roma.png"
-            city="Roma"
-            country="Itália"
-            countryIcon="romaIcon.png"
-          />
-          <CardCity
-            img="praga.png"
-            city="Praga"
-            country="República Tcheca"
-            countryIcon="pragaIcon.png"
-          />
-          <CardCity
-            img="amsterda.png"
-            city="Amsterdã"
-            country="Holanda"
-            countryIcon="amsterdaIcon.png"
-          />
+          {continent.cities?.map((city) => (
+            <CardCity 
+              key={city.name}
+              city={city.name}
+              img={city.image}
+              country={city.country}
+              countryIcon={city.icon}
+            />
+          ))}
         </Wrap>
       </Box>
     </>
   );
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const response = await (await fetch(`http://localhost:3333/continents`))
+  const data = await response.json()
+
+  const paths = data.map((continent: { id: string; }) => {
+      return { params: { id: continent.id } }
+  })
+  return{
+    paths,
+    fallback: false
+  }
+}
+
+interface IParams extends ParsedUrlQuery {
+  id: string
+}
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { id } = context.params as IParams;
+
+  const response = await (await fetch(`http://localhost:3333/continents/${id}`))
+  const data = await response.json()
+
+  return{
+   props:{
+     continent: data
+   }
+  }
 }
