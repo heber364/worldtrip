@@ -7,7 +7,12 @@
       "countries": 3,
       "languages": 5,
       "citiesGlobalTop": 11,
-      "image": "northamerica.jpg"
+      "image": "northamerica.jpg",
+      "slide":{
+        "slug": "northamerica",
+        "description": "O continente dos 'únicos americanos'",
+        "image": "northamerica.jpg"
+      }
     },
     {
       "id": "southamerica",
@@ -16,7 +21,12 @@
       "countries": 12,
       "languages": 8,
       "citiesGlobalTop": 4,
-      "image": "southamerica.jpg"
+      "image": "southamerica.jpg",
+      "slide":{
+        "slug": "southamerica",
+        "description": "O continente cheio de riquezas naturais.",
+        "image": "southamerica.jpg"
+      }
     },
     {
       "id": "asia",
@@ -25,7 +35,12 @@
       "countries": 49,
       "languages": 5,
       "citiesGlobalTop": 47,
-      "image": "asia.jpg"
+      "image": "asia.jpg",
+      "slide":{
+        "slug": "asia",
+        "description": "O continente mais populoso.",
+        "image": "asia.jpg"
+      }
     },
     {
       "id": "africa",
@@ -34,7 +49,12 @@
       "countries": 2000,
       "languages": 1,
       "citiesGlobalTop": 2,
-      "image": "africa.jpg"
+      "image": "africa.jpg",
+      "slide":{
+        "slug": "africa",
+        "description": "O continente geralmente confundido com um país.",
+        "image": "africa.jpg"
+      }
     },
     {
       "id": "europe",
@@ -75,7 +95,12 @@
           "image": "amsterdam.png",
           "icon": "netherlands.png"
         }
-      ]
+      ],
+      "slide":{
+        "slug": "europe",
+        "description": "O continente mais antigo.",
+        "image": "europa.png"
+      }
     },
     {
       "id": "oceania",
@@ -84,45 +109,12 @@
       "countries": 14,
       "languages": 1,
       "citiesGlobalTop": 2,
-      "image": "oceania.jpg"
+      "image": "oceania.jpg",
+      "slide": {
+        "slug": "oceania",
+        "description": "O continente dos cangurus.",
+        "image": "oceania.jpg"
+      }
     }
-  ],
-  "slides": [
-    {
-      "title": "América do Norte",
-      "slug": "northamerica",
-      "description": "O continente dos 'únicos americanos'",
-      "image": "northamerica.jpg"
-    },
-    {
-      "title": "América do Sul",
-      "slug": "southamerica",
-      "description": "O continente cheio de riquezas naturais.",
-      "image": "southamerica.jpg"
-    },
-    {
-      "title": "Ásia",
-      "slug": "asia",
-      "description": "O continente mais populoso.",
-      "image": "asia.jpg"
-    },
-    {
-      "title": "África",
-      "slug": "africa",
-      "description": "O continente geralmente confundido com um país.",
-      "image": "africa.jpg"
-    },
-    {
-      "title": "Europa",
-      "slug": "europe",
-      "description": "O continente mais antigo.",
-      "image": "europa.png"
-    },
-    {
-      "title": "Oceania",
-      "slug": "oceania",
-      "description": "O continente dos cangurus.",
-      "image": "oceania.jpg"
-    }
-  ]
+  ]  
 }

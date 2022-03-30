@@ -12,6 +12,7 @@ import { CardCity } from "../../components/CardCity";
 
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from 'querystring'
+import { Gradient } from "../../components/Gradient";
 
 type City = {
   name: string,
@@ -38,6 +39,7 @@ export default function Continent({ continent }: ContinentProps) {
   return (
     <>
       <Box
+        position="relative"
         bgImage={`url(/images/${continent.image})`}
         bgRepeat="no-repeat"
         bgSize="cover"
@@ -51,10 +53,12 @@ export default function Continent({ continent }: ContinentProps) {
           p="0 0 40px 40px"
           alignItems="end"
         >
-          <Heading as="h1" color="white" fontSize="48px">
+          <Heading as="h1" color="white" fontSize="48px" zIndex="1">
             {continent.title}
           </Heading>
+
         </Flex>
+        <Gradient />
       </Box>
       <Flex
         justifyContent="space-between"

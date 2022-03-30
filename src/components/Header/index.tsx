@@ -20,7 +20,10 @@ export function Header() {
       alignItems="center"
       justifyContent="center"
     >
-      <Image src="/images/logo.png" />
+      <Link href="/"> 
+        <Image src="/images/logo.png" cursor="pointer"/>
+      </Link>
+      
     </Flex>
   ) : (
     <Flex
@@ -35,7 +38,9 @@ export function Header() {
        <ChevronLeftIcon cursor="pointer" mr="auto" w={6} h={6} />
       </Link> 
 
-      <Image src="/images/logo.png" mr="auto" />
+      <Link href="/"> 
+        <Image src="/images/logo.png" mr="auto" cursor="pointer"/>
+      </Link>
     </Flex>
   );
 }

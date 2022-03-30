@@ -9,22 +9,24 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { Gradient } from "./Gradient";
+import { Gradient } from "../Gradient";
 
 import Link from "next/link";
 
 interface DataProps {
   title: string;
-  slug: string;
-  description: string;
-  image: string;
+  slide:{
+    slug: string;
+    description: string;
+    image: string;
+  }
 }
 
 export function Carousel() {
   const [data, setData] = useState<DataProps[]>([]);
 
   useEffect(() => {
-    api.get("/slides").then((response) => {
+    api.get("/continents").then((response) => {
       setData(response.data);
     });
   }, []);
@@ -40,11 +42,13 @@ export function Carousel() {
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="carousel"
       >
-        {data.map((slide) => (
-          <SwiperSlide key={slide.slug}>
-            <Link href={`/continents/${slide.slug}`}>
+        {data.map((continent) => (
+          <SwiperSlide key={continent.slide.slug}>
+            <Link href={`/continents/${continent.slide.slug}`}>
               <Box
-                bgImage={`url(/images/${slide.image})`}
+              cursor="pointer"
+                position="relative"
+                bgImage={`url(/images/${continent.slide.image})`}
                 bgRepeat="no-repeat"
                 bgSize="cover"
                 bgPosition="center top -100px"
@@ -59,7 +63,7 @@ export function Carousel() {
                       color="white"
                       zIndex="1"
                     >
-                      {slide.title}
+                      {continent.title}
                     </Text>
                     <Text
                       as="p"
@@ -68,7 +72,7 @@ export function Carousel() {
                       color="white"
                       zIndex="1"
                     >
-                      {slide.description}
+                      {continent.slide.description}
                     </Text>
                   </Stack>
                 </Center>
