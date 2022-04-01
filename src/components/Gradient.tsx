@@ -8,7 +8,7 @@ export function Gradient() {
       top="0"
       w="100%"
       h="100%"
-      bgGradient="linear(to-b, gray.900,gray.900)"
+      bg="gray.900"
       opacity="35%"
     />
   );

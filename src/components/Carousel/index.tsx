@@ -53,14 +53,14 @@ export function Carousel() {
                 bgImage={`url(/images/${continent.slide.image})`}
                 bgRepeat="no-repeat"
                 bgSize="cover"
-                bgPosition="center top -100px"
-                h="450px"
+                bgPosition="center top"
+                h={{base:"250px", sm:"450px"}}
               >
-                <Center h="100%">
-                  <Stack alignItems="center">
+                <Center h="100%" w="100%">
+                  <Stack alignItems="center" w="85%">
                     <Text
                       as="b"
-                      fontSize="48px"
+                      fontSize={{base:"24px", sm:"32px", md:"48px"}}
                       fontWeight="700"
                       color="white"
                       zIndex="1"
@@ -69,10 +69,12 @@ export function Carousel() {
                     </Text>
                     <Text
                       as="p"
-                      fontSize="24px"
+                      fontSize={{base:"14px", sm:"20px", md:"24px"}}
                       fontWeight="700"
                       color="white"
                       zIndex="1"
+                      w="85%"
+                      textAlign="center"
                     >
                       {continent.slide.description}
                     </Text>
