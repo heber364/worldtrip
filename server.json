@@ -142,8 +142,8 @@
       "id": "africa",
       "title": "África",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus magna eu quam gravida, nec fringilla nunc mollis. Aliquam ipsum leo, lobortis non commodo et, accumsan sed neque. ",
-      "countries": 2000,
-      "languages": 1,
+      "countries": 54,
+      "languages": 200,
       "citiesGlobalTop": 2,
       "image": "africa.jpg",
       "cities": [
