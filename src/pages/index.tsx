@@ -9,7 +9,22 @@ import {
   HStack,
 	Center,
   Divider,
+  Wrap,
+  WrapItem,
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
 } from "@chakra-ui/react";
+
+
+import { CircleIcon } from "../components/Icons/CircleIcon";
+import { DrinkIcon } from "../components/Icons/DrinkIcon";
+import { SurfIcon } from "../components/Icons/SurfIcon";
+import { BuildingIcon } from "../components/Icons/BuildingIcon";
+import { MuseumIcon } from "../components/Icons/MuseumIcon";
+import { EarthIcon } from "../components/Icons/EarthIcon";
 
 export default function Home() {
   return (
@@ -48,7 +63,8 @@ export default function Home() {
           </Box>
 
           <Box>
-            <Image   
+            <Image 
+              display={{base:'none',lg:'block'}}  
               src="/images/Airplane.png"
               alt="Avião"
               transform="rotate(3deg) translateY(60px)"
@@ -58,29 +74,37 @@ export default function Home() {
       </Box>
 			<Box 
 				p="114px 0"
+        m="0 auto"
 			>
-				<HStack alignItems="center" justifyContent="center" spacing="130px">
-					<Stack alignItems="center" justifyContent="center">
-						<Image src="/images/cocktail.png"/>
-						<Text mt="25px" fontSize="24px" fontWeight="600" color="gray.700" >vida noturna</Text>
-					</Stack>
-					<Stack alignItems="center" justifyContent="center">
-						<Image src="/images/praia.png"/>
-						<Text mt="25px" fontSize="24px" fontWeight="600" color="gray.700" >praia</Text>
-					</Stack>
-					<Stack alignItems="center" justifyContent="center">
-						<Image src="/images/moderno.png"/>
-						<Text mt="25px" fontSize="24px" fontWeight="600" color="gray.700" >moderno</Text>
-					</Stack>
-					<Stack alignItems="center" justifyContent="center">
-						<Image src="/images/museum.png"/>
-						<Text mt="25px" fontSize="24px" fontWeight="600" color="gray.700" >clássico</Text>
-					</Stack>
-					<Stack alignItems="center" justifyContent="center">
-						<Image src="/images/earth.png"/>
-						<Text mt="25px" fontSize="24px" fontWeight="600" color="gray.700" >e mais...</Text>
-					</Stack>
-				</HStack>
+
+            <List display="flex" flexWrap="wrap" gap="130px">
+              <ListItem  fontSize="24px" fontWeight="600" color="gray.700" >
+                <ListIcon as={CircleIcon} color='yellow' display={{base:'',lg:'none'}} />
+                <ListIcon as={DrinkIcon} color="yellow" display={{base:'none', lg:'block'}} boxSize="85px" m="0 auto" mb="25px"/>
+                vida noturna
+              </ListItem>
+              <ListItem  fontSize="24px" fontWeight="600" color="gray.700" >
+                <ListIcon as={CircleIcon} color='yellow' display={{base:'',lg:'none'}} />
+                <ListIcon as={SurfIcon} color="yellow" display={{base:'none', lg:'block'}} boxSize="85px" m="0 auto" mb="25px"/>
+                praia
+              </ListItem>
+              <ListItem  fontSize="24px" fontWeight="600" color="gray.700" >
+                <ListIcon as={CircleIcon} color='yellow' display={{base:'',lg:'none'}} />
+                <ListIcon as={BuildingIcon} color="yellow" display={{base:'none', lg:'block'}} boxSize="85px" m="0 auto" mb="25px"/>
+                moderno
+              </ListItem>
+              <ListItem  fontSize="24px" fontWeight="600" color="gray.700" >
+                <ListIcon as={CircleIcon} color='yellow' display={{base:'',lg:'none'}} />
+                <ListIcon as={MuseumIcon} color="yellow" display={{base:'none', lg:'block'}} boxSize="85px" m="0 auto" mb="25px"/>
+                clássico
+              </ListItem>
+              <ListItem  fontSize="24px" fontWeight="600" color="gray.700" >
+                <ListIcon as={CircleIcon} color='yellow' display={{base:'',lg:'none'}} />
+                <ListIcon as={EarthIcon} color="yellow" display={{base:'none', lg:'block'}} boxSize="85px" m="0 auto" mb="25px"/>
+                e mais...
+              </ListItem>
+
+            </List>
 			</Box>
 			<Center>
 				<Divider orientation="horizontal" w="90px" borderColor="gray.700"/>
@@ -94,8 +118,9 @@ export default function Home() {
 						<Text fontSize="36px" fontWeight="500" color="gray.700">Então escolha seu continente</Text>
 					</Stack>	
 				</Center>	
-			</Box>
-	   <Carousel />
+			</Box> 
+      <Carousel />
+
     </>
 
   );

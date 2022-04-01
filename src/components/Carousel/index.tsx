@@ -33,7 +33,7 @@ export function Carousel() {
 
   console.log(data)
   return (
-    <Box maxW="1240px" m="0 auto 40px auto">
+    <Box>
       <Swiper
         navigation={true}
         pagination={true}
@@ -41,12 +41,14 @@ export function Carousel() {
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="carousel"
+        
+
       >
         {data.map((continent) => (
           <SwiperSlide key={continent.slide.slug}>
             <Link href={`/continents/${continent.slide.slug}`}>
               <Box
-              cursor="pointer"
+                cursor="pointer"
                 position="relative"
                 bgImage={`url(/images/${continent.slide.image})`}
                 bgRepeat="no-repeat"
