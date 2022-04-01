@@ -175,7 +175,7 @@ export default function Continent({ continent }: ContinentProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await await fetch(`https://my-json-server.typicode.com/heber364/backendWorldtrip/continents`);
+  const response = await fetch(`https://my-json-server.typicode.com/heber364/backendWorldtrip/continents`);
   const data = await response.json();
 
   const paths = data.map((continent: { id: string }) => {
