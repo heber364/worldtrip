@@ -6,13 +6,18 @@ import {
   Stack,
   HStack,
   Wrap,
+  Image,
+  Tooltip,
+
 } from "@chakra-ui/react";
-
-import { CardCity } from "../../components/CardCity";
-
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
+
+import { CardCity } from "../../components/CardCity";
 import { Gradient } from "../../components/Gradient";
+
+import InfoIcon from '../../components/InfoIcon.svg';
+
 
 type City = {
   name: string;
@@ -125,16 +130,23 @@ export default function Continent({ continent }: ContinentProps) {
               fontSize={{ base: "24px", sm: "32px", md: "38", xl: "48px" }}
               color="yellow"
             >
-              27
+              {continent.citiesGlobalTop}
             </Text>
-            <Text
-              as="span"
-              fontSize={{ base: "18px", sm: "20px", md: "24px" }}
-              fontWeight={{ base: "400", sm: "500", xl: "600" }}
-              color="gray.700"
-            >
-              cidades +100
-            </Text>
+            <Box>
+              <Text
+                as="span"
+                fontSize={{ base: "18px", sm: "20px", md: "24px" }}
+                fontWeight={{ base: "400", sm: "500", xl: "600" }}
+                color="gray.700"
+              >
+                cidades +100
+              </Text>
+              <Tooltip hasArrow label={`Possuem ${continent.citiesGlobalTop} cidades entre as 100 mais visitadas em todo o mundo`} bg='gray.200' color='gray.700'>
+                <Image src={InfoIcon} boxSize={4} display="inline-flex" ml="9px"/>
+              </Tooltip>
+              
+            </Box>
+            
           </Stack>
         </HStack>
       </Flex>
